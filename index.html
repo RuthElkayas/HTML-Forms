@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Form Inputs Examples</title>
+  </head>
+  <body>
+    <h1>Form Inputs Examples</h1>
+
+    <!-- One form wraps every example. Submit and check Network in dev tools -->
+    <form action="/submit" method="POST">
+      <!-- Text, Password, Email -->
+      <fieldset>
+        <legend>Text inputs</legend>
+
+        <label for="username">Text</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          placeholder="Enter your name"
+          required
+        />
+        <br />
+
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          minlength="8"
+          maxlength="20"
+          required
+        />
+        <br />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+      </fieldset>
+
+      <!-- File, Image, Number, Range -->
+      <fieldset>
+        <legend>File, number and range</legend>
+
+        <label for="file">File</label>
+        <input type="file" id="file" name="file"  />
+        <br />
+
+        <!-- Image input is a submit button shown as a picture (placeholder file) -->
+        <label for="image">Image</label>
+        <input
+          type="image"
+          id="image"
+          name="image"
+          src="img/submit.png"
+          alt="Submit with image"
+          width="60"
+        />
+        <br />
+
+        <label for="age">Number</label>
+        <input
+          type="number"
+          id="age"
+          name="age"
+          min="0"
+          max="120"
+          step="1"
+        />
+        <br />
+
+        <label for="volume">Range</label>
+        <input
+          type="range"
+          id="volume"
+          name="volume"
+          min="0"
+          max="100"
+          value="50"
+        />
+      </fieldset>
+
+      <!-- Radio: same name = only one choice. Value is what gets sent -->
+      <fieldset>
+        <legend>Radio</legend>
+
+        <input type="radio" id="small" name="size" value="s" />
+        <label for="small">Small</label>
+
+        <input type="radio" id="medium" name="size" value="m" />
+        <label for="medium">Medium</label>
+
+        <input type="radio" id="large" name="size" value="l" />
+        <label for="large">Large</label>
+      </fieldset>
+
+      <!-- Checkbox: same name = all checked values are sent -->
+      <fieldset>
+        <legend>Checkbox</legend>
+
+        <input type="checkbox" id="html" name="topics" value="html" />
+        <label for="html">HTML</label>
+
+        <input type="checkbox" id="css" name="topics" value="css" />
+        <label for="css">CSS</label>
+
+        <input type="checkbox" id="js" name="topics" value="js" />
+        <label for="js">JavaScript</label>
+      </fieldset>
+
+      <!-- Select is not an input. Good for many options -->
+      <fieldset>
+        <legend>Select</legend>
+
+        <label for="country">Country</label>
+        <select id="country" name="country">
+          <option value="il">Israel</option>
+          <option value="us">United States</option>
+          <option value="fr">France</option>
+          <option value="jp">Japan</option>
+          <option value="it">Italy</option>
+
+        </select>
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
